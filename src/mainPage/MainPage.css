@@ -1,0 +1,27 @@
+.main-page {
+  height: calc(200% - 15%);
+  width: 100%;
+  /* background-color: #008bd1; */
+  color: black;
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+}
+
+.main-page__currecy-list-container {
+  height: 100%;
+  width: 100%;
+  background-color: #008bd1;
+  display: flex;
+  justify-content: center;
+}
+
+.main-page__currency-list {
+  height: 100%;
+  width: 85%;
+  margin-top: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-radius: 2%;
+}

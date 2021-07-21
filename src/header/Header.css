@@ -1,0 +1,50 @@
+.header {
+  height: 15%;
+  width: 100%;
+  background-color: #E5E8E8;
+  color: black;
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  top: 0;
+}
+
+.header-fixed {
+  height: 15%;
+  width: 100%;
+  background-color: #E5E8E8;
+  color: black;
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+}
+
+.header__headline {
+  height: calc(100% - 50px);
+  width: calc(30% - 100px);
+  margin-top: 50px;
+  margin-left: 100px;
+  display: flex;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 30px;
+}
+
+.header__link {
+  height: calc(100% - 50px);
+  width: 25%;
+  margin-top: 50px;
+  display: flex;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+.header__favourites {
+  height: calc(100% - 50px);
+  width: 25%;
+  margin-top: 50px;
+  display: flex;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
