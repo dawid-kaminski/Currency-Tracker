@@ -1,41 +1,38 @@
 import React from 'react';
+import MainPageItem from './MainPageItem.js'
 import './MainPage.css';
 
-// export const getCurrencyList=async(dispatch)=> {
-//   try {
-//     const getNewCurrencyListResponse = await fetch("http://api.nbp.pl/api/exchangerates/tables/A")
+fetch('http://api.nbp.pl/api/exchangerates/tables/A')
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+    const mid = data[0].rates.map(currency => {
+      return currency.mid
+    });
+    console.log(mid)
+  })
 
-//     const newCurrency = await getNewCurrencyListResponse.json()
-
-//     // const currencyCode = newDeck.deck_id
-
-//     // const getNewCardResponse = await fetch(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=3`)
-
-//     // const newCards = await getNewCardResponse.json()
-    
-//     // const cards = newCards.cards
-
-//     // dispatch({type : "createNewRound", cards : cards})
-//   }
-//   catch(error) {
-//     getCurrencyList(dispatch)
-//   }
-// }
-
-const getCurrencyList = fetch("http://api.nbp.pl/api/exchangerates/tables/A")
-
-console.log(getCurrencyList)
-
-const getUSD = fetch("http://api.nbp.pl/api/exchangerates/rates/A/USD/")
-
-console.log(getUSD)
-
-function MainPage() {
+fetch('http://api.nbp.pl/api/exchangerates/tables/A')
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+    const code = data[0].rates.map(currency => {
+      return currency.code
+    });
+    console.log(code)
+  })
+  
+function MainPage(props) {
   return (
     <div className="main-page">
       <div className="main-page__currecy-list-container">
         <div className="main-page__currency-list">
-
+          <MainPageItem currency="EUR" mid="4.5" />
+          <MainPageItem currency="USD" mid="4" />
+          <MainPageItem currency="GBP" mid="5" />
+          <MainPageItem currency="CHF" mid="3.5" />
         </div>
       </div>
     </div>

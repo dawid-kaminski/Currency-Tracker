@@ -1,7 +1,8 @@
 .main-page {
-  height: calc(200% - 15%);
+  /* height: calc(100% - 15%); */
+  min-height: calc(100% - 15%);
+  height: auto;
   width: 100%;
-  /* background-color: #008bd1; */
   color: black;
   display: flex;
   text-align: left;
@@ -9,7 +10,8 @@
 }
 
 .main-page__currecy-list-container {
-  height: 100%;
+  min-height: calc(100% - 15%);
+  height: auto;
   width: 100%;
   background-color: #008bd1;
   display: flex;
@@ -17,11 +19,13 @@
 }
 
 .main-page__currency-list {
-  height: 100%;
+  /* height: calc(100% - 100px); */
+  /* height: auto; */
   width: 85%;
-  margin-top: 50px;
+  margin: 50px 0px;
   background-color: white;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   border-radius: 2%;
 }

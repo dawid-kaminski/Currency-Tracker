@@ -1,0 +1,13 @@
+.item__container {
+  /* height: 10%; */
+  width: calc(100% -80px);
+  margin: 20px 40px;
+  background-color: yellow;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  height: 20px;
+  width: 20px;
+}

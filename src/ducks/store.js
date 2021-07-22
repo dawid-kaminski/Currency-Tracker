@@ -12,4 +12,4 @@ const rootReducer = combineReducers({
 const middleware = composeWithDevTools(applyMiddleware(thunk));
 const store = createStore(rootReducer, undefined, middleware);
 
-export default store
+export default store;
