@@ -1,7 +1,7 @@
 .header {
   height: 15%;
   width: 100%;
-  background-color: #E5E8E8;
+  background-color: #e5e8e8;
   color: black;
   display: flex;
   text-align: left;
@@ -12,7 +12,7 @@
 .header-fixed {
   height: 15%;
   width: 100%;
-  background-color: #E5E8E8;
+  background-color: #e5e8e8;
   color: black;
   display: flex;
   text-align: left;
@@ -27,7 +27,7 @@
   margin-top: 50px;
   margin-left: 100px;
   display: flex;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 30px;
 }
 
@@ -36,8 +36,9 @@
   width: 25%;
   margin-top: 50px;
   display: flex;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .header__favourites {
@@ -45,6 +46,7 @@
   width: 25%;
   margin-top: 50px;
   display: flex;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
+  cursor: pointer;
 }
