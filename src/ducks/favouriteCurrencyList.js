@@ -1,18 +1,18 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const currencySlice = createSlice({
-  name: 'list',
+  name: "list",
   initialState: {
-    list: [0],
+    list: [],
   },
   reducers: {
     saveCurrencies(state, action) {
-      const { currency, mid } = action.payload
-      state.list.push({currency: currency, mid: mid})
+      const { currency, mid } = action.payload;
+      state.list.push({ currency: currency, mid: mid });
     },
-  }
-})
+  },
+});
 
-export const { saveCurrencies } = currencySlice.actions
+export const { saveCurrencies } = currencySlice.actions;
 
-export default currencySlice.reducer
+export default currencySlice.reducer;

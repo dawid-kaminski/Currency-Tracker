@@ -1,13 +1,9 @@
-import Header from './header/Header.js'
-import MainPage from './mainPage/MainPage.js'
-import Favourites from './favourites/Favourites.js'
-import './App.css';
+import Header from "./header/Header.js";
+import MainPage from "./mainPage/MainPage.js";
+import Favourites from "./favourites/Favourites.js";
+import "./App.css";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -19,7 +15,7 @@ function App() {
             <MainPage />
           </Route>
           <Route exact path="/favourites">
-            <Favourites /> 
+            <Favourites />
           </Route>
         </Switch>
       </Router>

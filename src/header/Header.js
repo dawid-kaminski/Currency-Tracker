@@ -1,39 +1,38 @@
-import React, {useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import './Header.css';
+import "./Header.css";
 
 function Header() {
-
   const [isFixedHeader, setIsFixedHeader] = useState(false);
 
-  const history = useHistory()
+  const history = useHistory();
 
   useEffect(() => {
     const listener = (event) => {
-      if(window.scrollY > 400 && isFixedHeader === false ) {
-        setIsFixedHeader(true)
-      } 
-      if(window.scrollY < 400 && isFixedHeader === true ) { 
-        setIsFixedHeader(false)
+      if (window.scrollY > 400 && isFixedHeader === false) {
+        setIsFixedHeader(true);
       }
-    }
-    document.addEventListener('scroll', listener );
-    return () => {document.removeEventListener('scroll', listener)}
-  }, [isFixedHeader])
+      if (window.scrollY < 400 && isFixedHeader === true) {
+        setIsFixedHeader(false);
+      }
+    };
+    document.addEventListener("scroll", listener);
+    return () => {
+      document.removeEventListener("scroll", listener);
+    };
+  }, [isFixedHeader]);
 
   const onClickMainPage = () => {
-    history.push('/')
-  }
+    history.push("/");
+  };
 
   const onClickFavourites = () => {
-    history.push('/favourites')
-  }
+    history.push("/favourites");
+  };
 
   return (
-    <div className={(isFixedHeader === true ? 'header-fixed' : 'header' )}>
-      <div className="header__headline">
-        Currency Tracker
-      </div>
+    <div className={isFixedHeader === true ? "header-fixed" : "header"}>
+      <div className="header__headline">Currency Tracker</div>
       <div className="header__link" onClick={onClickMainPage}>
         Main Page
       </div>
