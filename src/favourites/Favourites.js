@@ -20,7 +20,7 @@ function Favourites(props) {
           {list.map((object, index) => {
             return (
               <GetCurrencyRender
-                key={object.currency}
+                key={index}
                 currency={object.currency}
                 mid={object.mid}
               />

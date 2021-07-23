@@ -19,8 +19,6 @@ function MainPage(props) {
       });
   }, []);
 
-  console.log(mids);
-
   useEffect(() => {
     fetch("http://api.nbp.pl/api/exchangerates/tables/A")
       .then((response) => {
@@ -33,8 +31,6 @@ function MainPage(props) {
         setCodes(code);
       });
   }, []);
-
-  console.log(codes);
 
   return (
     <div className="main-page">

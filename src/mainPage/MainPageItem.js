@@ -7,7 +7,6 @@ function MainPageItem(props) {
   const dispatch = useDispatch();
 
   const onClickAddToFavouritesButton = useCallback(() => {
-    console.log();
     dispatch(saveCurrencies({ currency: props.currency, mid: props.mid }));
   }, [dispatch, props.currency, props.mid]);
 

@@ -10,9 +10,16 @@ const currencySlice = createSlice({
       const { currency, mid } = action.payload;
       state.list.push({ currency: currency, mid: mid });
     },
+    deleteCurrency(state, action) {
+      const { currency } = action.payload;
+      const newList = state.list.filter(
+        (object) => object.currency !== currency
+      );
+      return { list: newList };
+    },
   },
 });
 
-export const { saveCurrencies } = currencySlice.actions;
+export const { saveCurrencies, deleteCurrency } = currencySlice.actions;
 
 export default currencySlice.reducer;
