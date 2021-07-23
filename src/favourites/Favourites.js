@@ -5,7 +5,9 @@ import "../mainPage/MainPage.css";
 import { saveCurrencies } from "../ducks/favouriteCurrencyList";
 
 function Favourites(props) {
-  const currencyStore = useSelector((state) => state.list);
+  const list = useSelector((state) => {
+    return state.favouriteCurrencyList.list;
+  });
 
   const GetCurrencyRender = React.memo(({ currency, mid }) => {
     return <FavouriteCurrencyItem currency={currency} mid={mid} />;
@@ -13,11 +15,16 @@ function Favourites(props) {
 
   return (
     <div className="main-page">
-      list of favourite currencies
       <div className="main-page__currecy-list-container">
         <div className="main-page__currency-list">
-          {currencyStore.list.map((currency, mid) => {
-            return <GetCurrencyRender currency={currency} mid={mid} />;
+          {list.map((object, index) => {
+            return (
+              <GetCurrencyRender
+                key={object.currency}
+                currency={object.currency}
+                mid={object.mid}
+              />
+            );
           })}
         </div>
       </div>

@@ -9,7 +9,7 @@ function MainPageItem(props) {
   const onClickAddToFavouritesButton = useCallback(() => {
     console.log();
     dispatch(saveCurrencies({ currency: props.currency, mid: props.mid }));
-  }, [dispatch]);
+  }, [dispatch, props.currency, props.mid]);
 
   return (
     <div className="item__container">
@@ -20,7 +20,7 @@ function MainPageItem(props) {
         <div className="item__mid">{props.mid}</div>
       </div>
       <button
-        class="add-currency-button"
+        className="add-currency-button"
         onClick={onClickAddToFavouritesButton}
       >
         Add Currency to Favourites!
