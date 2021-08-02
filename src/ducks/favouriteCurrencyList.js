@@ -8,7 +8,12 @@ const currencySlice = createSlice({
   reducers: {
     saveCurrencies(state, action) {
       const { currency, mid } = action.payload;
-      state.list.push({ currency: currency, mid: mid });
+      const isCurrencyAddedAlready = state.list.find(
+        (favouriteCurrency) => favouriteCurrency.currency === currency
+      );
+      if (!isCurrencyAddedAlready) {
+        state.list.push({ currency: currency, mid: mid });
+      }
     },
     deleteCurrency(state, action) {
       const { currency } = action.payload;

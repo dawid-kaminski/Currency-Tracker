@@ -9,10 +9,10 @@ function Header() {
 
   useEffect(() => {
     const listener = (event) => {
-      if (window.scrollY > 400 && isFixedHeader === false) {
+      if (window.scrollY > 400 && !isFixedHeader) {
         setIsFixedHeader(true);
       }
-      if (window.scrollY < 400 && isFixedHeader === true) {
+      if (window.scrollY < 400 && isFixedHeader) {
         setIsFixedHeader(false);
       }
     };
@@ -31,7 +31,7 @@ function Header() {
   };
 
   return (
-    <div className={isFixedHeader === true ? "header-fixed" : "header"}>
+    <div className={isFixedHeader ? "header-fixed" : "header"}>
       <div className="header__headline">Currency Tracker</div>
       <div className="header__link" onClick={onClickMainPage}>
         Main Page

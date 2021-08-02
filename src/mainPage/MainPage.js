@@ -11,24 +11,9 @@ function MainPage(props) {
       .then((response) => {
         return response.json();
       })
-      .then((data) => {
-        const mid = data[0].rates.map((currency) => {
-          return currency.mid;
-        });
-        setMids(mid);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetch("http://api.nbp.pl/api/exchangerates/tables/A")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        const code = data[0].rates.map((currency) => {
-          return currency.code;
-        });
-        setCodes(code);
+      .then(([data]) => {
+        setMids(data.rates.map((currency) => currency.mid));
+        setCodes(data.rates.map((currency) => currency.code));
       });
   }, []);
 
